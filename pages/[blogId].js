@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   
-    const res = await fetch('http://localhost:3000/api/posts/');
+    const res = await fetch(`${process.env.BASE_URL}/api/posts/`);
     const result = await res.json();
   
     return {
